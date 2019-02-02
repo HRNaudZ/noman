@@ -186,7 +186,7 @@ And You Will Get Links To Download (~20) Udemy Courses That Match The Keywords :
         'parse_mode' : 'markdown'
         });
   }
-  else{
+  else if(chatId>0) {
     bot.sendMessage(chatId, '😹 What do you mean ? ! Here You Can Download All Paid udemy\
  Courses For Free !\n\n Just Type : */download keywords* To Get Download Links *(Torrent+Magnet)* !\n\n\
     For Example Type : */download web design*\n\
