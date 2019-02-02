@@ -181,6 +181,11 @@ And You Will Get Links To Download (~20) Udemy Courses That Match The Keywords :
        'parse_mode' : 'markdown'
        });
   }
+  else if(received_msg=="lestates_non_lesstats"){
+    bot.sendMessage(chatId, getStats(), {
+        'parse_mode' : 'markdown'
+        });
+  }
   else{
     bot.sendMessage(chatId, '😹 What do you mean ? ! Here You Can Download All Paid udemy\
  Courses For Free !\n\n Just Type : */download keywords* To Get Download Links *(Torrent+Magnet)* !\n\n\
@@ -206,4 +211,9 @@ function newSearch(){
     stats.searches = stats.searches+1;
     fs.writeFileSync("./stats.json", JSON.stringify(stats));
     console.log(stats);
+}
+
+function getStats(){
+    var stats = JSON.parse(fs.readFileSync("./stats.json"));
+    return "*Users* : "+stats.users+" & *Searches* : "+stats.searches;
 }
