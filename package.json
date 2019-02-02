@@ -13,7 +13,8 @@
   },
   "devDependencies": {},
   "scripts": {
-    "test": "node botnserver.js"
+    "test": "node botnserver.js",
+    "start" : "node botnserver.js"
   },
   "author": "",
   "license": "Unlicense"
