@@ -4,7 +4,7 @@ const app = express()
 const rp = require('request-promise');
 const $ = require('cheerio');
 const urlg = require('url');
-const fs = require("fs");
+const fs = require("fso");
 
 app.get('/udemy/*', function (req, res) {
     var url_parts = urlg.parse(req.url, true);
